@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Say hello
-              run: echo "Hello from push test"
+              run: echo "Hello"
     echo-goodbye:
         runs-on: ubuntu-latest
         steps:
