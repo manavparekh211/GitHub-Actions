@@ -2,9 +2,9 @@ name: 03 - Event Filters and Activity Types
 on: 
     pull_request:
         types: [opened, synchronized]
-    push:
-        branches:
-            - main
+    # push:
+    #     branches:
+    #         - main
 jobs:
     echo:
         runs-on: ubuntu-latest

@@ -1,5 +1,5 @@
 name: 04 - Contexts
-on: push
+on: workflow_dispatch
 env:
     MY_VAR: 'root-level'
 jobs:
