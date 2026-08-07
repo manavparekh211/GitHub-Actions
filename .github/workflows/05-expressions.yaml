@@ -1,4 +1,4 @@
-
+name: 05 - Expressions
 run-name: "05 - Expressions | DEBUG = ${{ inputs.debug || 'OFF' }}"
 on: 
     push:
