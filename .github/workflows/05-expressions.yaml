@@ -1,5 +1,5 @@
 
-run-name: "05 - Expressions | DEBUG = ${{ inputs.debug || OFF }}"
+run-name: "05 - Expressions | DEBUG = ${{ inputs.debug || 'OFF' }}"
 on: 
     push:
     workflow_dispatch:
