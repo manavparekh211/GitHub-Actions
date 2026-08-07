@@ -16,5 +16,6 @@ jobs:
             - name: Finding out the VAR precedence
               env:
                 MY_VAR: 'step-level'
-              run: echo "VAR value: ${{ env.MY_VAR }}"
+              run: |
+                echo "VAR value: ${{ env.MY_VAR }}"
 
