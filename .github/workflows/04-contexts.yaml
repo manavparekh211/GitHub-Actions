@@ -1,0 +1,20 @@
+name: 04 - Contexts
+on: push
+env:
+    MY_VAR: 'root-level'
+jobs:
+    echo-data:
+        runs-on: ubuntu-latest
+        env:
+            MY_VAR: 'job-level'
+        steps:
+            - name: Display information about the event
+              run: |
+                echo "Event name: ${{ github.event_name }}"
+                echo "SHA: ${{ github.sha }}"
+                echo "Github author: ${{ github.actor }}"
+            - name: Finding out the VAR precedence
+              env:
+                MY_VAR: 'step-level'
+              run: echo "VAR value: ${{ env.MY_VAR }}"
+
