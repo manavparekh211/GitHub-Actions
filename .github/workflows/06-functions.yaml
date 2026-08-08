@@ -1,5 +1,7 @@
 name: 06 - Functions
-on: [pull_request, workflow_dispatch]
+on: 
+    # pull_request:
+    workflow_dispatch:
 jobs:
     echo1:
         runs-on: ubuntu-latest
