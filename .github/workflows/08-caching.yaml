@@ -28,7 +28,7 @@ jobs:
                 node-version: '{{ inputs.node-version }}'
             - name: Download cached dependencies
               id: cache
-              if: {{ inputs.use-cache }}
+              if: ${{ inputs.use-cache }}
               uses: actions/cache@v6
               with:
                 path: caching/react-app/node_modules
