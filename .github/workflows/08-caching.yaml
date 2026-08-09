@@ -8,11 +8,7 @@ on:
                 default: true
 jobs:
     build:
-        runs-on: ubuntu-latest
-        defaults:
-            run:
-                shell: bash
-                working-directory: ./caching
+        runs-on: ubuntu-latest                
         steps:
             - name: Checkout code
               uses: actions/checkout@v7
@@ -22,6 +18,7 @@ jobs:
                 node-version: '24.x'
             - name: Install dependencies
               run: npm ci
+              working-directory: ./caching
             - name: Testing
               run: npm run test
             - name: Building
