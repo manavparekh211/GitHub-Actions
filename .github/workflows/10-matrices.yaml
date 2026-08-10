@@ -2,7 +2,7 @@ name: 10 - Matrices
 on: workflow_dispatch
 jobs:
     backwards-compatibility:
-        runs-on: ubuntu-latest
+        runs-on: ${{ matrix.version }}
         name: ${{ matrix.version }}-${{ matrix.node }}
         strategy:
             fail-fast: true
@@ -11,7 +11,7 @@ jobs:
                 version: [ubuntu-latest, windows-latest]
                 include:
                     - version: ubuntu-latest
-                      node: 24.x
+                      node: 26.x
                       tag: experimental
                       
         steps:
