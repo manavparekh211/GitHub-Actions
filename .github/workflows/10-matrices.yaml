@@ -5,7 +5,7 @@ jobs:
         runs-on: ${{ matrix.version }}
         name: ${{ matrix.version }}-${{ matrix.node }}
         strategy:
-            fail-fast: true
+            fail-fast: false
             matrix:
                 node: [24.x, 26.x]
                 version: [ubuntu-latest, windows-latest]
