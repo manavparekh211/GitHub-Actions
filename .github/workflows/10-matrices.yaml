@@ -3,9 +3,9 @@ on: workflow_dispatch
 jobs:
     backwards-compatibility:
         runs-on: ubuntu-latest
+        name: ${{ matrix.version }}-${{ matrix.node }}
         strategy:
             fail-fast: false
-            name: ${{ matrix.version }}-${{ matrix.node }}
             matrix:
                 node: [24.x, 26.x]
                 version: [ubuntu-latest, windows-latest]
